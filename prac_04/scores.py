@@ -29,15 +29,19 @@ def main():
 
 
 def print_scores(subjects, scores_by_subject):
+    print("{:<10}".format("Subject"), end="")
+    for i in range(1, 11):
+        print("{:<4}".format(f"Student {i}   "), end="")
+    print("Max    Min    Avg")
+
     for i in range(len(subjects)):
-        print(subjects[i], "Scores:")
+        print("{:<10}   ".format(subjects[i]), end="")
         for score in scores_by_subject[i]:
-            print(score)
-        print("Max:", max(scores_by_subject[i]))
-        print("Min:", min(scores_by_subject[i]))
+            print("{:<4}        ".format(score), end="")
+        print("{:<5} ".format(max(scores_by_subject[i])), end="")
+        print("{:<5}  ".format(min(scores_by_subject[i])), end="")
         average = sum(scores_by_subject[i]) / len(scores_by_subject[i])
-        print("Average:", average)
-        print()
+        print("{:.2f}  ".format(average))
 
 
 main()

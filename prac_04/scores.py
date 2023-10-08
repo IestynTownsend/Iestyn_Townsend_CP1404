@@ -17,7 +17,7 @@ def main():
     scores_file.close()
 
     subjects = scores_data[0].strip().split(",")
-    score_by_subject = [[] for i in subjects]
+    score_by_subject = [[] for _ in subjects]
 
     for score_line in scores_data[1:]:
         score_strings = score_line.strip().split(",")

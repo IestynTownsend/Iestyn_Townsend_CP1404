@@ -27,10 +27,17 @@ numbers = [3, 1, 4, 1, 5, 9, 2]
 # numbers + [6, 5, 3]
 # [3, 1, 4, 1, 5, 9, 2, 6, 5, 3]
 
+# question 1
 numbers[0] = "ten"
+
+# question 2
 numbers[-1] = 1
+
+# question 3
 print(numbers[2:])
+
+# question 4
 if 9 in numbers:
     print("9 is an element of numbers")
-else
+else:
     print("9 is not an element of numbers")

@@ -37,7 +37,4 @@ numbers[-1] = 1
 print(numbers[2:])
 
 # question 4
-if 9 in numbers:
-    print("9 is an element of numbers")
-else:
-    print("9 is not an element of numbers")
+print(9 in numbers)

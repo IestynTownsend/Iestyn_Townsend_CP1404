@@ -1,3 +1,6 @@
+"""
+Basic list Operations
+"""
 # creates an empty list to store the numbers in
 numbers = []
 
@@ -14,3 +17,18 @@ print(f"The largest number is {max(numbers)}")
 average = sum(numbers) / len(numbers)
 print(f"The average of the numbers is {average:.1f}")
 # unsure if having a ".0" at the end of the first 4 of ok, if not a ":.0f" should be appended.
+
+"""
+Woefully inadequate security checker
+"""
+# assigning pre-approved usernames
+usernames = ['jimbo', 'giltson98', 'derekf', 'WhatSup', 'NicolEye', 'swei45', 'BaseInterpreterInterface', 'BaseStdIn',
+             'Command', 'ExecState', 'InteractiveConsole', 'InterpreterInterface', 'StartServer', 'bob']
+# requesting a username from the user
+user_input = input("Enter your username: ")
+
+# checking to see if the user entered username is approved
+if user_input in usernames:
+    print("Access granted")
+else:
+    print("Access denied")

@@ -6,13 +6,14 @@ def extract_name(email):
 
 
 def main():
-    user_info = {}
+    email_to_name = {}
+    is_true = True
 
-    while True:
+    while is_true:
         email = input("Email: ").strip()
 
         if not email:
-            break
+            is_true = False
 
         name = extract_name(email)
         name_input = input(f"Is your name {name}? (Y/n) ").strip().lower()
@@ -20,9 +21,9 @@ def main():
         if name_input in ['n', 'no']:
             name = input("Name: ").strip().title()
 
-        user_info[email] = name
+        email_to_name[email] = name
 
-    for email, name in user_info.items():
+    for email, name in email_to_name.items():
         print(f"{name} ({email})")
 
 

@@ -1,0 +1,25 @@
+BoxLayout:
+    orientation: 'vertical'
+
+    BoxLayout:
+        orientation: 'horizontal'
+        spacing: 10  # Adjust the spacing between widgets
+
+        TextInput:
+            id: input_number
+            text: '7'
+            font_size: 48
+            multiline: False
+
+        Button:
+            text: 'Square'
+            on_press: app.handle_calculate(input_number.text)
+            background_color: (1, 0.8, 1, 1)  # Lighter pink color
+
+        Label:
+            id: output_label
+            font_size: 48
+            color: (1, 0.8, 1, 1)  # Lighter pink color
+
+    Label:
+        text: 'Enter a number and press "Square"'

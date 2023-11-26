@@ -4,7 +4,7 @@ Testing demo using assert and doctest
 """
 
 import doctest
-from prac_06.car import Car  # Assuming the Car class is in the prac_06 module
+from prac_06.car import Car
 
 
 def repeat_string(s, n):
@@ -40,7 +40,6 @@ def run_tests():
     test_car = Car()  # Testing with default fuel value
     assert test_car.fuel == 0, "Car does not set fuel correctly with the default value"
 
-    # Uncomment the following line to run doctests
     doctest.testmod()
 
     assert is_long_word("not") is False
